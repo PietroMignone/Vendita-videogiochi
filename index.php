@@ -24,246 +24,178 @@ if (isset($_GET['add_to_cart'])) {
 
 
     <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    body {
-        font-family: 'Rubik', sans-serif;
-        background-color: #0b0c10;
-        color: #f4f4f4;
-        line-height: 1.6;
-    }
-
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        padding: 20px 40px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background: rgba(11, 12, 16, 0.85);
-        backdrop-filter: blur(5px);
-        z-index: 1000;
-        border-bottom: 3px solid #8e44ad;
-    }
-
-    header h1 {
-        font-family: 'Orbitron', sans-serif;
-        color: #ff4ecd;
-        font-size: 32px;
-    }
-
-    .auth-links a, .logout, .carrello-link {
-        color: #ff4ecd;
-        border: 2px solid #ff4ecd;
-        padding: 8px 16px;
-        border-radius: 8px;
-        text-decoration: none;
-        margin-left: 15px;
-        transition: all 0.3s ease;
-    }
-
-    .auth-links a:hover, .logout:hover, .carrello-link:hover {
-        background-color: #ff4ecd;
-        color: #0b0c10;
-        box-shadow: 0 0 10px #ff4ecd;
-    }
-
-    .hero {
-        background: url('cyb.jpg') center center/cover no-repeat;
-        height: 70vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-    }
-
-    .hero-text {
-        background-color: rgba(11, 12, 16, 0.85);
-        padding: 40px;
-        border: 2px solid #8e44ad;
-        border-radius: 12px;
-        max-width: 90%;
-    }
-
-    .hero-text h2 {
-        font-size: 40px;
-        color: #ff4ecd;
-        margin-bottom: 15px;
-    }
-
-    .hero-text p {
-        font-size: 18px;
-        color: #ccc;
-    }
-
-    .catalogo {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr); /* 3 giochi per riga */
-        gap: 20px;
-        padding: 40px;
-    }
-
-    .gioco {
-        background: #202020;
-        border: 1px solid #8e44ad;
-        border-radius: 10px;
-        overflow: hidden;
-        position: relative;
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .gioco:hover {
-        transform: scale(1.03);
-        box-shadow: 0 0 15px #ff4ecd;
-    }
-
-    .gioco img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-    }
-
-    .gioco-content {
-        padding: 20px;
-    }
-
-    .gioco h3 {
-        color: #ff4ecd;
-        margin-bottom: 10px;
-    }
-
-    .gioco p {
-        color: #ccc;
-        margin-bottom: 15px;
-        font-size: 16px;
-    }
-
-    .gioco p s {
-        color: #888;
-        margin-right: 10px;
-    }
-
-    .gioco p strong {
-        color: #00ffff;
-    }
-
-    .button {
-        background-color: transparent;
-        color: #ff4ecd;
-        border: 2px solid #ff4ecd;
-        padding: 10px 15px;
-        border-radius: 8px;
-        text-decoration: none;
-        font-weight: bold;
-        transition: all 0.3s ease;
-    }
-
-    .button:hover {
-        background-color: #ff4ecd;
-        color: #0b0c10;
-        box-shadow: 0 0 10px #ff4ecd;
-    }
-
-    .ribbon {
-        position: absolute;
-        top: 10px;
-        left: -10px;
-        background: #00ffff;
-        color: #0b0c10;
-        padding: 5px 20px;
-        transform: rotate(-45deg);
-        font-size: 12px;
-        font-weight: bold;
-        z-index: 1;
-    }
-
-    .gioco:hover .ribbon {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease;
-}
-
-.gioco:hover .game-video {
-    opacity: 1;
-    pointer-events: auto;
-}
-
-.gioco:hover .game-image {
-    opacity: 0;
-}
-
-
-    main > div {
-        text-align: center;
-        margin: 20px;
-    }
-
-    .media-container {
-        position: relative;
-        width: 100%;
-        height: 300px;
-        overflow: hidden;
-    }
-
-    .game-image, .game-video {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: opacity 0.5s ease;
-    }
-
-    .game-video {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    footer {
-        text-align: center;
-        padding: 20px;
-        background: #202020;
-        color: #888;
-        font-size: 14px;
-        margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Rubik', sans-serif;
+            background-color: #0b0c10;
+            color: #f4f4f4;
+        }
+        /* Header trasparente */
         header {
-            flex-direction: column;
-            padding: 15px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(11, 12, 16, 0.85); /* Trasparenza */
+            backdrop-filter: blur(5px); /* Effetto sfocatura */
+            z-index: 1000;
+            border-bottom: 3px solid #8e44ad;
         }
-
+        header h1 {
+            font-family: 'Orbitron', sans-serif;
+            color: #ff4ecd;
+            font-size: 32px;
+        }
         .auth-links a, .logout, .carrello-link {
-            margin: 10px 5px 0 0;
+            color: #ff4ecd;
+            border: 2px solid #ff4ecd;
+            padding: 8px 16px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-left: 15px;
+            transition: 0.3s;
         }
-
+        .auth-links a:hover, .logout:hover, .carrello-link:hover {
+            background-color: #ff4ecd;
+            color: #0b0c10;
+            box-shadow: 0 0 10px #ff4ecd;
+        }
+        .hero {
+            background: url('cyb.jpg') center center/cover no-repeat;
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero-text {
+            background-color: rgba(11, 12, 16, 0.85);
+            padding: 40px;
+            border: 2px solid #8e44ad;
+            border-radius: 12px;
+        }
         .hero-text h2 {
-            font-size: 28px;
+            font-size: 40px;
+            color: #ff4ecd;
+            margin-bottom: 15px;
         }
-
         .hero-text p {
+            font-size: 18px;
+            color: #ccc;
+        }
+        .catalogo {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 3 giochi per riga */
+            gap: 20px;
+            padding: 40px;
+        }
+        .gioco {
+            background: #202020;
+            border: 1px solid #8e44ad;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .gioco:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 15px #ff4ecd;
+        }
+        .gioco img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        .gioco-content {
+            padding: 20px;
+        }
+        .gioco h3 {
+            color: #ff4ecd;
+            margin-bottom: 10px;
+        }
+        .gioco p {
+            color: #ccc;
+            margin-bottom: 15px;
             font-size: 16px;
         }
+        .gioco p s {
+            color: #888;
+            margin-right: 10px;
+        }
+        .gioco p strong {
+            color: #00ffff;
+        }
+        .button {
+            background-color: transparent;
+            color: #ff4ecd;
+            border: 2px solid #ff4ecd;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background-color: #ff4ecd;
+            color: #0b0c10;
+            box-shadow: 0 0 10px #ff4ecd;
+        }
+        .ribbon {
+            position: absolute;
+            top: 10px;
+            left: -10px;
+            background: #00ffff;
+            color: #0b0c10;
+            padding: 5px 20px;
+            transform: rotate(-45deg);
+            font-size: 12px;
+            font-weight: bold;
+        }
+        main > div {
+            text-align: center;
+            margin: 20px;
+        }
 
-        .catalogo {
+        .media-container {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.game-image, .game-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease;
+}
+
+.game-video {
+    opacity: 0;
+    pointer-events: none;
+}
+
+        footer {
+            text-align: center;
             padding: 20px;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            background: #202020;
+            color: #555;
+            font-size: 14px;
+            margin-top: 40px;
         }
-
-        .gioco img {
-            height: 200px;
-        }
-    }
-</style>
-
+        
+    </style>
 </head>
 <body>
 <header>
@@ -298,8 +230,8 @@ if (isset($_GET['add_to_cart'])) {
 
 <main>
     <div>
-        <a class="button" href="giochi.php">Catalogo Giochi</a>
-        <a class="button" href="info.php">Leggi le Novità</a>
+        <a class="button" href="giochi.php">Leggi le Novità</a>
+        <a class="button" href="info.php">Catalogo Giochi</a>
     </div>
 
     <div class="catalogo"> 
@@ -317,6 +249,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>Assassin's Creed Shadows</h3>
         <p><s>70€</s> <strong>49,49€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('Assassin\'s Creed Shadows')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('Assassin\'s Creed Shadows'); ?>">Dettagli</a>
     </div>
 </div>
@@ -334,6 +267,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>The Last Of Us Part II Remastered</h3>
         <p><s>50€</s> <strong>35,69€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('The Last Of Us Part II Remastered')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('The Last Of Us Part II Remastered'); ?>">Dettagli</a>
     </div>
 </div>
@@ -351,6 +285,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>Cyberpunk 2077: Ultimate Edition</h3>
         <p><s>90€</s> <strong>32,99€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('Cyberpunk 2077: Ultimate Edition')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('Cyberpunk 2077: Ultimate Edition'); ?>">Dettagli</a>
     </div>
 </div>
@@ -368,10 +303,10 @@ if (isset($_GET['add_to_cart'])) {
         <h3>UNCHARTED: Raccolta L'eredità dei ladri</h3>
         <p><s>50€</s> <strong>15,68€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('UNCHARTED: Raccolta L\'eredità dei ladri')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('UNCHARTED: Raccolta L\'eredità dei ladri'); ?>">Dettagli</a>
     </div>
 </div>
-
 <!-- EA Sports FC 25 -->
 <div class="gioco">
     <span class="ribbon">-63%</span>
@@ -385,6 +320,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>EA Sports FC 25</h3>
         <p><s>70€</s> <strong>25,65</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('EA Sports FC 25')">Aggiungi al carrello</a>
+        <div class="ribbon" style="background: #ff4ecd;">Usato</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('EA Sports FC 25'); ?>">Dettagli</a>
     </div>
 </div>
@@ -402,6 +338,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>Baldur's Gate III</h3>
         <p><s>60€</s> <strong>55,99€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('Baldur\'s Gate III')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('Baldur\'s Gate III'); ?>">Dettagli</a>
     </div>
 </div>
@@ -419,6 +356,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>Call of Duty: Black Ops 6</h3>
         <p><s>80€</s> <strong>54,49€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('Call of Duty: Black Ops 6')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('Call of Duty: Black Ops 6'); ?>">Dettagli</a>
     </div>
 </div>
@@ -436,6 +374,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>Days Gone</h3>
         <p><s>10€</s> <strong>7,99€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('Days Gone')">Aggiungi al carrello</a>
+        <div class="ribbon" style="background: #ff4ecd;">Usato</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('Days Gone'); ?>">Dettagli</a>
     </div>
 </div>
@@ -453,6 +392,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>Clair Obscur: Expedition 33</h3>
         <p><s>50€</s> <strong>29,99€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('Clair Obscur: Expedition 33')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('Clair Obscur: Expedition 33'); ?>">Dettagli</a>
     </div>
 </div>
@@ -471,6 +411,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>It Takes Two</h3>
         <p><s>40€</s> <strong>15,85€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('It Takes Two')">Aggiungi al carrello</a>
+        <div class="ribbon" style="background: #ff4ecd;">Usato</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('It Takes Two'); ?>">Dettagli</a>
     </div>
 </div>
@@ -488,6 +429,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>Horizon Zero Dawn Remastered</h3>
         <p><s>50€</s> <strong>31,32€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('Horizon Zero Dawn Remastered')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('Horizon Zero Dawn Remastered'); ?>">Dettagli</a>
     </div>
 </div>
@@ -505,6 +447,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>Kingdom Come: Deliverance II</h3>
         <p><s>60€</s> <strong>45,75€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('Kingdom Come: Deliverance II')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('Kingdom Come: Deliverance II'); ?>">Dettagli</a>
     </div>
 </div>
@@ -522,13 +465,14 @@ if (isset($_GET['add_to_cart'])) {
         <h3>Monster Hunter Wilds</h3>
         <p><s>70€</s> <strong>40,89€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('Monster Hunter Wilds')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('Monster Hunter Wilds'); ?>">Dettagli</a>
     </div>
 </div>
 
 <!-- NBA 2K25 -->
 <div class="gioco">
-    <span class="ribbon">-63%</span>
+    <span class="ribbon">-76%</span>
     <div class="media-container" onmouseenter="playVideo(this)" onmouseleave="stopVideo(this)">
         <img src="2k25.jpg" alt="NBA 2K25" class="game-image">
         <video class="game-video" muted loop preload="none">
@@ -537,8 +481,9 @@ if (isset($_GET['add_to_cart'])) {
     </div>
     <div class="gioco-content">
         <h3>NBA 2K25</h3>
-        <p><s>70€</s> <strong>17,07€</strong></p>
+        <p><s>70€</s> <strong>16,85€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('NBA 2K25')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('NBA 2K25'); ?>">Dettagli</a>
     </div>
 </div>
@@ -557,6 +502,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>Spider-Man 2</h3>
         <p><s>60€</s> <strong>43,99€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('Spider-Man 2')">Aggiungi al carrello</a>
+        <div class="ribbon">Nuovo</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('Spider-Man 2'); ?>">Dettagli</a>
     </div>
 </div>
@@ -574,6 +520,7 @@ if (isset($_GET['add_to_cart'])) {
         <h3>Grand Theft Auto V</h3>
         <p><s>30€</s> <strong>11,89€</strong></p>
         <a class="button" href="javascript:void(0);" onclick="addToCart('Grand Theft Auto V')">Aggiungi al carrello</a>
+        <div class="ribbon" style="background: #ff4ecd;">Usato</div>
         <a class="button" href="gioco_dettaglio.php?nome=<?php echo urlencode('Grand Theft Auto V'); ?>">Dettagli</a>
     </div>
 </div>
@@ -652,6 +599,20 @@ if (isset($_GET['add_to_cart'])) {
     </a>
   </div>
 </div>
+
+<section class="contattaci" style="padding: 60px 40px; background-color: #0b0c10;">
+    <div style="max-width: 600px; margin: 0 auto; background-color: #151515; border: 2px solid #8e44ad; border-radius: 12px; padding: 30px;">
+        <h2 style="color: #ff4ecd; text-align: center; margin-bottom: 20px;">Contattaci</h2>
+        <form action="invia_email.php" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
+            <input type="text" name="nome" placeholder="Il tuo nome" required style="padding: 12px; border: 2px solid #ff4ecd; border-radius: 8px; background-color: #0b0c10; color: #f4f4f4;">
+            <input type="email" name="email" placeholder="La tua email" required style="padding: 12px; border: 2px solid #ff4ecd; border-radius: 8px; background-color: #0b0c10; color: #f4f4f4;">
+            <textarea name="messaggio" placeholder="Il tuo messaggio" rows="5" required style="padding: 12px; border: 2px solid #ff4ecd; border-radius: 8px; background-color: #0b0c10; color: #f4f4f4;"></textarea>
+            <button type="submit" class="button" style="cursor: pointer;">Invia</button>
+        </form>
+    </div>
+</section>
+
+
 
 
         </div>
