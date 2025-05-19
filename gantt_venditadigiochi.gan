@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="project.xsd">
+    <Name>Catena Vendita di Videogiochi Nuovi e Usati</Name>
+    <Title>Piano di Implementazione</Title>
+    <DefaultTaskType>Fixed Duration</DefaultTaskType>
+    <StartDate>2025-06-01</StartDate>
+    <EndDate>2026-03-31</EndDate>
+    
+    <Tasks>
+        <!-- FASE 1: PIANIFICAZIONE -->
+        <Task>
+            <ID>1</ID>
+            <Name>Pianificazione</Name>
+            <Type>Phase</Type>
+            <StartDate>2025-06-01</StartDate>
+            <EndDate>2025-07-15</EndDate>
+        </Task>
+        
+        <Task>
+            <ID>1.1</ID>
+            <Name>Ricerca di mercato e analisi della concorrenza</Name>
+            <OutlineNumber>1.1</OutlineNumber>
+            <StartDate>2025-06-01</StartDate>
+            <EndDate>2025-06-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+        </Task>
+        
+        <Task>
+            <ID>1.2</ID>
+            <Name>Sviluppo del business plan</Name>
+            <OutlineNumber>1.2</OutlineNumber>
+            <StartDate>2025-06-10</StartDate>
+            <EndDate>2025-06-30</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>1.1</PredecessorID>
+                <Type>FS</Type>
+                <Lag>-5</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>1.3</ID>
+            <Name>Pianificazione finanziaria e budget</Name>
+            <OutlineNumber>1.3</OutlineNumber>
+            <StartDate>2025-06-20</StartDate>
+            <EndDate>2025-07-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>1.2</PredecessorID>
+                <Type>FS</Type>
+                <Lag>-10</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <!-- FASE 2: COSTITUZIONE SOCIETÀ E QUESTIONI LEGALI -->
+        <Task>
+            <ID>2</ID>
+            <Name>Costituzione Società e Questioni Legali</Name>
+            <Type>Phase</Type>
+            <StartDate>2025-07-01</StartDate>
+            <EndDate>2025-08-15</EndDate>
+        </Task>
+        
+        <Task>
+            <ID>2.1</ID>
+            <Name>Registrazione dell'impresa</Name>
+            <OutlineNumber>2.1</OutlineNumber>
+            <StartDate>2025-07-01</StartDate>
+            <EndDate>2025-07-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+        </Task>
+        
+        <Task>
+            <ID>2.2</ID>
+            <Name>Ottenimento delle autorizzazioni commerciali</Name>
+            <OutlineNumber>2.2</OutlineNumber>
+            <StartDate>2025-07-15</StartDate>
+            <EndDate>2025-08-05</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>2.1</PredecessorID>
+                <Type>FS</Type>
+                <Lag>0</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>2.3</ID>
+            <Name>Stipula accordi con fornitori e distributori</Name>
+            <OutlineNumber>2.3</OutlineNumber>
+            <StartDate>2025-07-25</StartDate>
+            <EndDate>2025-08-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>2.2</PredecessorID>
+                <Type>FS</Type>
+                <Lag>-10</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <!-- FASE 3: SELEZIONE DELLE LOCATION -->
+        <Task>
+            <ID>3</ID>
+            <Name>Selezione delle Location</Name>
+            <Type>Phase</Type>
+            <StartDate>2025-07-15</StartDate>
+            <EndDate>2025-09-15</EndDate>
+        </Task>
+        
+        <Task>
+            <ID>3.1</ID>
+            <Name>Ricerca punti vendita</Name>
+            <OutlineNumber>3.1</OutlineNumber>
+            <StartDate>2025-07-15</StartDate>
+            <EndDate>2025-08-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+        </Task>
+        
+        <Task>
+            <ID>3.2</ID>
+            <Name>Negoziazione contratti d'affitto</Name>
+            <OutlineNumber>3.2</OutlineNumber>
+            <StartDate>2025-08-10</StartDate>
+            <EndDate>2025-09-05</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>3.1</PredecessorID>
+                <Type>FS</Type>
+                <Lag>-5</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>3.3</ID>
+            <Name>Firma contratti e acquisizione locali</Name>
+            <OutlineNumber>3.3</OutlineNumber>
+            <StartDate>2025-09-01</StartDate>
+            <EndDate>2025-09-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>3.2</PredecessorID>
+                <Type>FS</Type>
+                <Lag>-5</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <!-- FASE 4: ALLESTIMENTO NEGOZI -->
+        <Task>
+            <ID>4</ID>
+            <Name>Allestimento Negozi</Name>
+            <Type>Phase</Type>
+            <StartDate>2025-09-15</StartDate>
+            <EndDate>2025-11-15</EndDate>
+        </Task>
+        
+        <Task>
+            <ID>4.1</ID>
+            <Name>Progettazione layout negozi</Name>
+            <OutlineNumber>4.1</OutlineNumber>
+            <StartDate>2025-09-15</StartDate>
+            <EndDate>2025-10-01</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>3.3</PredecessorID>
+                <Type>FS</Type>
+                <Lag>0</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>4.2</ID>
+            <Name>Acquisto arredi e attrezzature</Name>
+            <OutlineNumber>4.2</OutlineNumber>
+            <StartDate>2025-10-01</StartDate>
+            <EndDate>2025-10-20</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>4.1</PredecessorID>
+                <Type>FS</Type>
+                <Lag>0</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>4.3</ID>
+            <Name>Installazione e allestimento</Name>
+            <OutlineNumber>4.3</OutlineNumber>
+            <StartDate>2025-10-15</StartDate>
+            <EndDate>2025-11-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>4.2</PredecessorID>
+                <Type>FS</Type>
+                <Lag>-5</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <!-- FASE 5: SVILUPPO SISTEMA INFORMATICO -->
+        <Task>
+            <ID>5</ID>
+            <Name>Sviluppo Sistema Informatico</Name>
+            <Type>Phase</Type>
+            <StartDate>2025-08-01</StartDate>
+            <EndDate>2025-11-30</EndDate>
+        </Task>
+        
+        <Task>
+            <ID>5.1</ID>
+            <Name>Implementazione software gestionale</Name>
+            <OutlineNumber>5.1</OutlineNumber>
+            <StartDate>2025-08-01</StartDate>
+            <EndDate>2025-09-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+        </Task>
+        
+        <Task>
+            <ID>5.2</ID>
+            <Name>Sviluppo sito web e e-commerce</Name>
+            <OutlineNumber>5.2</OutlineNumber>
+            <StartDate>2025-08-15</StartDate>
+            <EndDate>2025-10-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+        </Task>
+        
+        <Task>
+            <ID>5.3</ID>
+            <Name>Integrazione sistemi POS e inventario</Name>
+            <OutlineNumber>5.3</OutlineNumber>
+            <StartDate>2025-09-15</StartDate>
+            <EndDate>2025-10-30</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>5.1</PredecessorID>
+                <Type>FS</Type>
+                <Lag>0</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>5.4</ID>
+            <Name>Test e collaudo sistema completo</Name>
+            <OutlineNumber>5.4</OutlineNumber>
+            <StartDate>2025-10-30</StartDate>
+            <EndDate>2025-11-30</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>5.3</PredecessorID>
+                <Type>FS</Type>
+                <Lag>0</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <!-- FASE 6: ACQUISIZIONE INVENTORY -->
+        <Task>
+            <ID>6</ID>
+            <Name>Acquisizione Inventory</Name>
+            <Type>Phase</Type>
+            <StartDate>2025-10-15</StartDate>
+            <EndDate>2025-12-15</EndDate>
+        </Task>
+        
+        <Task>
+            <ID>6.1</ID>
+            <Name>Ordine giochi nuovi dai distributori</Name>
+            <OutlineNumber>6.1</OutlineNumber>
+            <StartDate>2025-10-15</StartDate>
+            <EndDate>2025-11-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+        </Task>
+        
+        <Task>
+            <ID>6.2</ID>
+            <Name>Definizione politiche di acquisizione giochi usati</Name>
+            <OutlineNumber>6.2</OutlineNumber>
+            <StartDate>2025-10-15</StartDate>
+            <EndDate>2025-11-01</EndDate>
+            <PercentComplete>0</PercentComplete>
+        </Task>
+        
+        <Task>
+            <ID>6.3</ID>
+            <Name>Caricamento iniziale inventario</Name>
+            <OutlineNumber>6.3</OutlineNumber>
+            <StartDate>2025-11-15</StartDate>
+            <EndDate>2025-12-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>6.1</PredecessorID>
+                <Type>FS</Type>
+                <Lag>0</Lag>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorID>5.3</PredecessorID>
+                <Type>FS</Type>
+                <Lag>15</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <!-- FASE 7: RISORSE UMANE -->
+        <Task>
+            <ID>7</ID>
+            <Name>Risorse Umane</Name>
+            <Type>Phase</Type>
+            <StartDate>2025-10-01</StartDate>
+            <EndDate>2025-12-15</EndDate>
+        </Task>
+        
+        <Task>
+            <ID>7.1</ID>
+            <Name>Definizione organigramma e ruoli</Name>
+            <OutlineNumber>7.1</OutlineNumber>
+            <StartDate>2025-10-01</StartDate>
+            <EndDate>2025-10-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+        </Task>
+        
+        <Task>
+            <ID>7.2</ID>
+            <Name>Selezione e assunzione personale</Name>
+            <OutlineNumber>7.2</OutlineNumber>
+            <StartDate>2025-10-15</StartDate>
+            <EndDate>2025-11-30</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>7.1</PredecessorID>
+                <Type>FS</Type>
+                <Lag>0</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>7.3</ID>
+            <Name>Formazione personale</Name>
+            <OutlineNumber>7.3</OutlineNumber>
+            <StartDate>2025-11-15</StartDate>
+            <EndDate>2025-12-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>7.2</PredecessorID>
+                <Type>FS</Type>
+                <Lag>-15</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <!-- FASE 8: MARKETING E PROMOZIONE -->
+        <Task>
+            <ID>8</ID>
+            <Name>Marketing e Promozione</Name>
+            <Type>Phase</Type>
+            <StartDate>2025-11-01</StartDate>
+            <EndDate>2026-01-31</EndDate>
+        </Task>
+        
+        <Task>
+            <ID>8.1</ID>
+            <Name>Sviluppo strategia di marketing</Name>
+            <OutlineNumber>8.1</OutlineNumber>
+            <StartDate>2025-11-01</StartDate>
+            <EndDate>2025-11-30</EndDate>
+            <PercentComplete>0</PercentComplete>
+        </Task>
+        
+        <Task>
+            <ID>8.2</ID>
+            <Name>Creazione materiali promozionali</Name>
+            <OutlineNumber>8.2</OutlineNumber>
+            <StartDate>2025-11-15</StartDate>
+            <EndDate>2025-12-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>8.1</PredecessorID>
+                <Type>FS</Type>
+                <Lag>-15</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>8.3</ID>
+            <Name>Campagna pre-apertura</Name>
+            <OutlineNumber>8.3</OutlineNumber>
+            <StartDate>2025-12-01</StartDate>
+            <EndDate>2025-12-31</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>8.2</PredecessorID>
+                <Type>FS</Type>
+                <Lag>-15</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>8.4</ID>
+            <Name>Promozioni di apertura</Name>
+            <OutlineNumber>8.4</OutlineNumber>
+            <StartDate>2026-01-01</StartDate>
+            <EndDate>2026-01-31</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>8.3</PredecessorID>
+                <Type>FS</Type>
+                <Lag>0</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <!-- FASE 9: APERTURA NEGOZI -->
+        <Task>
+            <ID>9</ID>
+            <Name>Apertura Negozi</Name>
+            <Type>Phase</Type>
+            <StartDate>2026-01-01</StartDate>
+            <EndDate>2026-03-31</EndDate>
+        </Task>
+        
+        <Task>
+            <ID>9.1</ID>
+            <Name>Apertura primo negozio principale</Name>
+            <OutlineNumber>9.1</OutlineNumber>
+            <StartDate>2026-01-01</StartDate>
+            <EndDate>2026-01-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>4.3</PredecessorID>
+                <Type>FS</Type>
+                <Lag>47</Lag>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorID>6.3</PredecessorID>
+                <Type>FS</Type>
+                <Lag>16</Lag>
+            </PredecessorLink>
+            <PredecessorLink>
+                <PredecessorID>7.3</PredecessorID>
+                <Type>FS</Type>
+                <Lag>16</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>9.2</ID>
+            <Name>Apertura secondo punto vendita</Name>
+            <OutlineNumber>9.2</OutlineNumber>
+            <StartDate>2026-02-01</StartDate>
+            <EndDate>2026-02-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>9.1</PredecessorID>
+                <Type>FS</Type>
+                <Lag>16</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>9.3</ID>
+            <Name>Apertura terzo punto vendita</Name>
+            <OutlineNumber>9.3</OutlineNumber>
+            <StartDate>2026-03-01</StartDate>
+            <EndDate>2026-03-15</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>9.2</PredecessorID>
+                <Type>FS</Type>
+                <Lag>14</Lag>
+            </PredecessorLink>
+        </Task>
+        
+        <Task>
+            <ID>9.4</ID>
+            <Name>Valutazione e ottimizzazione operazioni</Name>
+            <OutlineNumber>9.4</OutlineNumber>
+            <StartDate>2026-01-15</StartDate>
+            <EndDate>2026-03-31</EndDate>
+            <PercentComplete>0</PercentComplete>
+            <PredecessorLink>
+                <PredecessorID>9.1</PredecessorID>
+                <Type>FS</Type>
+                <Lag>0</Lag>
+            </PredecessorLink>
+        </Task>
+    </Tasks>
+    
+    <Resources>
+        <Resource>
+            <ID>1</ID>
+            <Name>Project Manager</Name>
+            <Type>Work</Type>
+        </Resource>
+        <Resource>
+            <ID>2</ID>
+            <Name>Team Marketing</Name>
+            <Type>Work</Type>
+        </Resource>
+        <Resource>
+            <ID>3</ID>
+            <Name>Team IT</Name>
+            <Type>Work</Type>
+        </Resource>
+        <Resource>
+            <ID>4</ID>
+            <Name>Team Acquisti</Name>
+            <Type>Work</Type>
+        </Resource>
+        <Resource>
+            <ID>5</ID>
+            <Name>Team Risorse Umane</Name>
+            <Type>Work</Type>
+        </Resource>
+        <Resource>
+            <ID>6</ID>
+            <Name>Team Legale</Name>
+            <Type>Work</Type>
+        </Resource>
+        <Resource>
+            <ID>7</ID>
+            <Name>Team Allestimento</Name>
+            <Type>Work</Type>
+        </Resource>
+    </Resources>
+    
+    <Assignments>
+        <!-- Assegnazioni di risorse omesse per brevità -->
+    </Assignments>
+</Project>
